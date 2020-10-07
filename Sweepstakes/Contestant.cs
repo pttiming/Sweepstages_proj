@@ -13,10 +13,43 @@ namespace Sweepstakes
         string lastName;
         string emailAddress;
         int registrationNumber;
-        //Constructor
-        public Contestant()
-        {
 
+        public string FirstName
+        {
+            get
+            {
+                return firstName;
+            }
+        }
+
+        public string LastName
+        {
+            get
+            {
+                return lastName;
+            }
+        }
+        public string EmailAddress
+        {
+            get
+            {
+                return emailAddress;
+            }
+        }
+        public int RegistrationNumber
+        {
+            get
+            {
+                return registrationNumber;
+            }
+        }
+        //Constructor
+        public Contestant(string firstName, string lastName, string emailAddress, int registrationNumber)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.emailAddress = emailAddress;
+            this.registrationNumber = registrationNumber;
         }
         //Methods
     }

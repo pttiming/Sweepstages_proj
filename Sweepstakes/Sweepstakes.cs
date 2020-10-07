@@ -9,7 +9,7 @@ namespace Sweepstakes
     class Sweepstakes
     {
         //Member Variables
-        Dictionary<int, Contestant> contestants;
+        public Dictionary<int, Contestant> contestants;
         string name;
 
         public string Name
@@ -21,32 +21,35 @@ namespace Sweepstakes
         }
 
         //Constructor
-        public Sweepstakes()
-        {
-
-        }
-        //Methods
         public Sweepstakes(string name)
         {
-
+            contestants = new Dictionary<int, Contestant>();
+            this.name = name;
         }
+        //Methods
 
         public void RegisterContestant(Contestant contestant)
         {
+            int contestantIndex = contestants.Count + 1;
+            contestants.Add(contestantIndex, contestant);
 
         }
 
         public Contestant PickWinner()
         {
             Contestant winner;
-
+            Random rand = new Random();
+            winner = contestants[rand.Next(1, (contestants.Count+1))];
             return winner;
         }
         
 
         public void PrintContestantInfo(Contestant contestant)
         {
-
+            Console.WriteLine($"First Name: {contestant.FirstName}");
+            Console.WriteLine($"Last Name: {contestant.LastName}");
+            Console.WriteLine($"Email: {contestant.EmailAddress}");
+            Console.WriteLine($"Registration Number: {contestant.RegistrationNumber}");
         }
     }
 }

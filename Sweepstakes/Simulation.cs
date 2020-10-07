@@ -15,7 +15,7 @@ namespace Sweepstakes
         //Methods
         public void CreateMarketingFirmWithManager()
         {
-            MarketingFirm firm = new MarketingFirm();
+           
         }
     }
 }
