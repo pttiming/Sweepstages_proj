@@ -14,7 +14,10 @@ namespace Sweepstakes
         string emailAddress;
         int registrationNumber;
         //Constructor
+        public Contestant()
+        {
 
+        }
         //Methods
     }
 }
