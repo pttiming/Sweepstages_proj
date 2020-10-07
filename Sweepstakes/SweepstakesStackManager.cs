@@ -12,6 +12,10 @@ namespace Sweepstakes
         Stack<Sweepstakes> stack;
 
         //Constructor
+        public SweepstakesStackManager()
+        {
+            stack = new Stack<Sweepstakes>();
+        }
 
         //Methods
         public void InsertSweepstakes(Sweepstakes sweepstakes)

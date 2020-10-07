@@ -12,6 +12,10 @@ namespace Sweepstakes
         Queue<Sweepstakes> queue;
 
         //Constructor
+        public SweepstatesQueueManager()
+        {
+            queue = new Queue<Sweepstakes>();
+        }
 
         //Methods
         public void InsertSweepstakes(Sweepstakes sweepstakes)
