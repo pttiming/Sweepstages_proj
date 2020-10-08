@@ -32,7 +32,6 @@ namespace Sweepstakes
         {
             int contestantIndex = contestants.Count + 1;
             contestants.Add(contestantIndex, contestant);
-
         }
 
         public Contestant PickWinner()
